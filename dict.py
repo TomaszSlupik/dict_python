@@ -284,3 +284,156 @@ team = {
     },
 }
 
+weight = team['players']['LeBron James']['weight']
+team['players']['Anthony Davis']['number'] = 23
+team_Anthony = list(team['players'].keys())[1]
+position_Anthony = team['players']['Anthony Davis']['position']
+number_Anthony = team['players']['Anthony Davis']['number']
+
+print(f"LeBron James weighs {weight} kg.")
+print(f"Team: {team['name']} - {team_Anthony} ({position_Anthony}, #{number_Anthony})")
+
+print('---')
+
+# 
+team = {
+'name': 'Lakers',
+'city': 'Los Angeles',
+'players': {
+    'LeBron James': {
+        'position': 'Forward',
+        'number': 23,
+        'height': 203,
+        'weight': 113,
+    },
+    'Anthony Davis': {
+        'position': 'Center',
+        'number': 3,
+        'height': 208,
+        'weight': 115,
+    },
+    'Russell Westbrook': {
+        'position': 'Guard',
+        'number': 0,
+        'height': 190,
+        'weight': 91,
+    },
+},
+}
+
+"""
+Do podanego słownika dodaj nowego gracza o kluczu 'Kobe Bryant' i poniższej wartości:
+    {
+        'position': 'Guard',
+        'number': 24,
+        'height': 198,
+        'weight': 96,
+    }
+W odpowiedzi wydrukuj poniższe informacje:
+    liczbę zawodników w słowniku team
+    numer dla zawodnika 'Kobe Bryant'
+"""
+team['players']['Kobe Bryant'] = {
+        'position': 'Guard',
+        'number': 24,
+        'height': 198,
+        'weight': 96,
+    }
+
+print(len(team['players']))
+print(team['players']['Kobe Bryant']['number'])
+
+print('---')
+
+flight = {
+'airline': 'Delta',
+'flight_number': 'DL215',
+'origin': {
+    'airport': 'JFK',
+    'city': 'New York',
+    'state': 'NY',
+    'country': 'USA',
+},
+'destination': {
+    'airport': 'LHR',
+    'city': 'London',
+    'country': 'UK',
+},
+'departure_time': '2023-05-01T08:00:00Z',
+'arrival_time': '2023-05-01T20:00:00Z',
+'passengers': [
+    {'name': 'John Smith', 'seat': '17A', 'meal': 'Vegetarian'},
+    {'name': 'Jane Doe', 'seat': '17B', 'meal': 'Kosher'},
+],
+}
+
+"""
+Wykonaj poniższe kroki:
+    wyodrębnij nazwę linii lotniczej i przypisz do zmiennej airline
+    wyodrębnij nazwę lotniska wylotu i przypisz do zmiennej origin_airport
+    wyznacz liczbę pasażerów i przypisz do zmiennej num_passengers
+    wyodrębnij numer lotu i przypisz do zmiennej flight_number
+"""
+airline = flight['airline']
+origin_airport = flight['origin']['airport']
+num_passengers = len(flight['passengers'])
+flight_number = flight['flight_number']
+
+print(f"Airline: {airline}")
+print(f"Origin airport code: {origin_airport}")
+print(f"Flight: {flight_number}")
+print(f"Number of passengers: {num_passengers}")
+
+print('---')
+
+flight = {
+    'airline': 'Delta',
+    'flight_number': 'DL215',
+    'origin': {
+        'airport': 'JFK',
+        'city': 'New York',
+        'state': 'NY',
+        'country': 'USA',
+    },
+    'destination': {
+        'airport': 'LHR',
+        'city': 'London',
+        'country': 'UK',
+    },
+    'departure_time': '2023-05-01T08:00:00Z',
+    'arrival_time': '2023-05-01T20:00:00Z',
+    'passengers': [
+        {'name': 'John Smith', 'seat': '17A', 'meal': 'Vegetarian'},
+        {'name': 'Jane Doe', 'seat': '17B', 'meal': 'Kosher'},
+    ],
+}
+
+"""
+Wykonaj poniższe kroki:
+    zaktualizuj wartość miejsca - 'seat' dla drugiego pasażera na numer '18B'
+    dodaj kolejnego pasażera o podanych danych
+    {'name': 'Bob Johnson', 'seat': '19C', 'meal': 'Halal'}
+    wyznacz liczbę pasażerów i przypisz do zmiennej num_passengers
+"""
+flight ['passengers'] = [
+        {'name': 'John Smith', 'seat': '17A', 'meal': 'Vegetarian'},
+        {'name': 'Jane Doe', 'seat': '18B', 'meal': 'Kosher'},
+        {'name': 'Bob Johnson', 'seat': '19C', 'meal': 'Halal'}
+    ]
+
+num_passengers = len(flight ['passengers'])
+arrival_time = flight['arrival_time']
+departure_time = flight['departure_time']
+origin_city = flight['origin']['city']
+state_origin_city = flight['origin']['state']
+airport_origin_city = flight['origin']['airport']
+destination_city = flight['destination']['city']
+airport_destination_city = flight['destination']['airport']
+country_destination_city = flight['destination']['country']
+
+
+print(f"From {origin_city}, {state_origin_city} ({airport_origin_city})")
+print(f"To {destination_city}, {country_destination_city} ({airport_destination_city})")
+print(f"Departure time: {departure_time}")
+print(f"Arrival time: {arrival_time}")
+print(f"Number of passengers: {num_passengers}")
